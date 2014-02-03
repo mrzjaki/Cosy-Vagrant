@@ -24,11 +24,11 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Shared Folder                 
   # ===============================
 
-  #HOST_PROJECT_PATH = "./workspace"
-  #GUEST_PROJECT_PATH = "/home/vagrant/workspace/"
+  HOST_PROJECT_PATH = "./example-workspace"
+  GUEST_PROJECT_PATH = "/home/vagrant/example-workspace/"
 
-  config.vm.synced_folder ".", "/vagrant", type: "nfs"
-  #config.vm.synced_folder HOST_PROJECT_PATH, GUEST_PROJECT_PATH, type: "nfs"
+  config.vm.synced_folder ".", "/vagrant", disabled: true
+  config.vm.synced_folder HOST_PROJECT_PATH, GUEST_PROJECT_PATH, type: "nfs"
 
   # ===============================
   # Provider (VirtualBox)
