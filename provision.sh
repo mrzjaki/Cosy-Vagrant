@@ -50,3 +50,10 @@ npm-packages-install	\
  	casperjs			\
  	node-sass			\
  	http-server			
+
+# ===============================
+# Cleanup Home Folder
+# ===============================
+
+rm -f postinstall.sh
+rmdir tmp
